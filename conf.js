@@ -1,16 +1,17 @@
 exports.config = {
     seleniumAddress: 'http://localhost:4444/wd/hub',
-    specs: ['Tests/handle-dropdown.js'],
+    // specs: ['Tests/CalculatorTest.js'],
+    specs: ['Tests/*.js'],
     framework: 'jasmine2',
     capabilities: {
         'browserName': 'chrome'
     },
     onPrepare: function () {
-        const Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter')
-        jasmine.getEnv().addReporter(new Jasmine2HtmlReporter({
-            savePath: './reports/',
-            screenshotsFolder: 'images'
-        }));
+        var HtmlReporter = require('protractor-beautiful-reporter');
+
+        jasmine.getEnv().addReporter(new HtmlReporter({
+            baseDirectory: './reports'
+         }).getJasmine2Reporter());
         
         const AllureReporter = require('jasmine-allure-reporter');
         jasmine.getEnv().addReporter(new AllureReporter());
