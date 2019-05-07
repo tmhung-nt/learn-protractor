@@ -1,0 +1,20 @@
+{
+  "name": "protractor-demo",
+  "version": "1.0.0",
+  "description": "protractor-demo",
+  "main": "conf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "protractor conf.js",
+    "webdriver-manager": "webdriver-manager"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jasmine-allure-reporter": "^1.0.2",
+    "protractor": "^5.4.2"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^3.3.12"
+  }
+}
