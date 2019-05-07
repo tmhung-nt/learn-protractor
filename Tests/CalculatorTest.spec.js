@@ -25,9 +25,9 @@ describe("Validating the Calculator app", () => {
         
     });
 
-    it("validate 2 + 2 != 3", () => {
+    it("validate 1 + 1 != 3", () => {
         expect_text.then(text =>{
-            expect(text).not.toBe('3');
+            expect(parseInt(text)).not.toBe(3);
         });        
     });
 });
