@@ -22,7 +22,23 @@ module.exports = {
   setValueSecondNumber: (value) => {
     return secondNumberEle.sendKeys(value);
   },
+  runCalculation: () => {
+    return goBtnEle.click();
+  },
   getCalculationResult: () => {
     return calculationResultEle.getText();
+  },
+  verifyCalculationResultIs: (expectedValue) => {
+    calculationResultEle.getText().then(text =>{
+      expect(text).toBe(expectedValue);
+    });
+  },
+  verifyCalculationResultIsNOT: (expectedValue) => {
+    calculationResultEle.getText().then(text =>{
+      expect(text).not.toBe(expectedValue);
+    });
+  },
+  setOperator: (value) => {
+    return element(by.model('operator')).element(by.cssContainingText('option', value)).click();
   }
 }
