@@ -25,6 +25,29 @@ describe("Validating the Calculator app", () => {
         calculationPage.setValueFirstNumber(1);
         calculationPage.setValueSecondNumber(1);
         calculationPage.runCalculation();
-        calculationPage.verifyCalculationResultIs('3');
+        calculationPage.verifyCalculationResultIsNOT('3');
+    });
+
+    it("validate 5 * 6 = 30", () => {
+        calculationPage.setValueFirstNumber(5);
+        calculationPage.setValueSecondNumber(6);
+        calculationPage.setOperator('*');
+        calculationPage.runCalculation();
+        calculationPage.verifyCalculationResultIs('30');
+    });
+
+    it("validate 30 / 5 = 6", () => {
+        calculationPage.setValueFirstNumber(30);
+        calculationPage.setValueSecondNumber(5);
+        calculationPage.setOperator('/');
+        calculationPage.runCalculation();
+        calculationPage.verifyCalculationResultIs('6');
+    });
+    it("validate 26 % 11 = 4", () => {
+        calculationPage.setValueFirstNumber(26);
+        calculationPage.setValueSecondNumber(11);
+        calculationPage.setOperator('%');
+        calculationPage.runCalculation();
+        calculationPage.verifyCalculationResultIs('4');
     });
 });

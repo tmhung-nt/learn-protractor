@@ -37,5 +37,8 @@ module.exports = {
     calculationResultEle.getText().then(text =>{
       expect(text).not.toBe(expectedValue);
     });
+  },
+  setOperator: (value) => {
+    return element(by.model('operator')).element(by.cssContainingText('option', value)).click();
   }
 }
