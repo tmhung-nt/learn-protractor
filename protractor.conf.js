@@ -3,9 +3,18 @@ exports.config = {
     specs: ['src/Tests/CalculatorTest.spec.js'],
     // specs: ['Tests/*.js'],
     framework: 'jasmine2',
-    capabilities: {
-        'browserName': 'chrome'
-    },
+    multiCapabilities: [
+        {
+            browserName: 'firefox',
+            'name': 'Zalenium - Protractor - Firefox',
+        },
+        {
+            browserName: 'chrome',
+            'name': 'Zalenium - Protractor - Chrome',
+        },
+    ],
+    allScriptsTimeout: 25000,
+    defaultTimeoutInterval: 30000,
     onPrepare: function () {
         var HtmlReporter = require('protractor-beautiful-reporter');
 

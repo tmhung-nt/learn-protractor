@@ -1,4 +1,4 @@
-Snippets
+nippets
 Below is a list of all snippets and the triggers.
 
 The ⇥ means the TAB key.

@@ -5,7 +5,8 @@
   "main": "conf.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "protractor conf.js",
+    "docker-e2e": "protractor protractor.docker.conf.js",
+    "e2e": "protractor protractor.conf.js",
     "webdriver-manager": "webdriver-manager"
   },
   "author": "",
