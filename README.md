@@ -7,7 +7,26 @@
 - On your terminal, run script `scripts\webdriver-manager-update.bat`
 
 
-## Run test
-- Make sure the test file you want to execute is listed in `conf.js` file
-- On your terminal, fire this command `npm start`
+## Run test locally
+1. Install dependencies  
+    * __npm install__
+2. Start webdriver-manager  
+    * Open a cmd window  
+    * Run script __start-webdriver-manager.bat__
+3. Start Protractor test execution  
+    * Open another cmd window  
+    * __npm run e2e__  
+
+## Run test with Selenium Docker
+1. Make sure __*webdriver-manager*__ is stopped (to release port 4444)
+2. Start Protractor test execution
+    * Open a cmd window
+    * Run script __run-test-in-selenium.bat__
+
+## Run test with Zalenium Docker
+1. Make sure webdriver-manager is stopped (to release port 4444)
+2. Start Protractor test execution
+    * Open a cmd window
+    * Run script __run-test-in-zalenium.bat__    
+
 
