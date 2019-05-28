@@ -28,12 +28,13 @@ services:
   e2e:
     build:
       context: .
-      dockerfile: Docker/Dockerfile-Zalenium
+      dockerfile: Docker/Dockerfile
     depends_on:
       - hub
     environment:
       - SELENIUM_URL=http://hub:4444
     volumes:
+      - /tests/node_modules
       - ./:/tests:rw
-      - ./test-results/gc:/tests/out:rw
-      - ./test-results/allure:/tests/output/allure:rw
+      - ./test-results/reports:/tests/reports:rw
+      - ./test-results/allure-results:/tests/allure-results:rw
