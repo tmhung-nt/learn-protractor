@@ -20,7 +20,7 @@ services:
             --screenWidth 1360 --screenHeight 1024
             --timeZone "Asia/Bangkok"
             --videoRecordingEnabled true
-            --keepOnlyFailedTests true
+            --keepOnlyFailedTests false
     environment:
       - HOST_UID
       - HOST_GID
